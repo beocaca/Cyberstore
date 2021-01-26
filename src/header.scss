@@ -1,5 +1,5 @@
 .header {
-  z-index: 100;
+  z-index: 2000;
   position: relative;
 }
 
@@ -20,7 +20,7 @@
 
 #multiCollapseExample0 {
   &.show {
-    .mb-menu{
+    .mb-menu {
       right: 0;
     }
 
@@ -83,9 +83,8 @@
 }
 
 
-
-.red{
-  border: solid red!important;
+.red {
+  border: solid red !important;
 }
 
 .search--input-wrap {
@@ -174,9 +173,11 @@
     background-color: #fff;
 
     &.depart--detail {
-
       padding: 10px 0 20px 10px;
       left: 0;
+      .depart--item{
+        position: static;
+      }
       box-shadow: 0 5px 9px rgba(86, 119, 252, .05);
       @media (max-width: 768px) {
         width: 25vw;
@@ -282,6 +283,7 @@
   justify-content: space-between;
   display: flex;
   padding: 8px 0;
+  position: relative;
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -405,10 +407,12 @@ a {
   position: relative;
   justify-content: center;
   align-items: flex-end;
-  height: 500px;
+  height: 600px;
   @media (max-width: 768px) {
     height: 400px;
-
+  }
+  @media(max-width: 599px) {
+    height: 250px;
   }
 }
 
