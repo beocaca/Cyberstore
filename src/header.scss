@@ -1,16 +1,23 @@
 .header {
-  z-index: 2000;
   position: relative;
+  z-index: 1500;
+}
+.mb-top{
+  position: sticky;
+  z-index: 1600;
+  top: 0;
+  left: 0;
+  background-color: white;
 }
 
 .mb-menu {
-  z-index: 9999;
+  z-index: 1700;
   transition: all linear 0.25s;
   background-color: #fff;
-  height: 100vh;
-  width: 60vw;
+  height: 100%;
+  width: 80vw;
   top: 0;
-  right: -50%;
+  right: -80vw;
   position: fixed;
   padding: 0;
   margin: 0;
@@ -19,12 +26,22 @@
 }
 
 #multiCollapseExample0 {
+  &:not(.show){
+    display: block;
+  }
   &.show {
     .mb-menu {
       right: 0;
     }
 
   }
+}
+
+
+.newspaper {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid lightgray;
 }
 
 .pad {
@@ -175,9 +192,11 @@
     &.depart--detail {
       padding: 10px 0 20px 10px;
       left: 0;
-      .depart--item{
+
+      .depart--item {
         position: static;
       }
+
       box-shadow: 0 5px 9px rgba(86, 119, 252, .05);
       @media (max-width: 768px) {
         width: 25vw;
@@ -199,12 +218,11 @@
       font-size: 14px;
       display: flex;
       left: -150px;
-      width: 870px;
+      width: 700px;
       padding-bottom: 20px;
 
-      @media (max-width: 768px) {
+      @media (min-width: 768px) and (max-width: 992px) {
         width: 400px;
-
       }
       /* .depart--list--item {
          width: 25%;
