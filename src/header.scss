@@ -2,12 +2,17 @@
   position: relative;
   z-index: 1500;
 }
-.mb-top{
+
+.mb-top {
   position: sticky;
   z-index: 1600;
   top: 0;
   left: 0;
   background-color: white;
+}
+
+.borbot6px {
+  padding-bottom: 6px
 }
 
 .mb-menu {
@@ -26,9 +31,10 @@
 }
 
 #multiCollapseExample0 {
-  &:not(.show){
+  &:not(.show) {
     display: block;
   }
+
   &.show {
     .mb-menu {
       right: 0;
@@ -198,7 +204,8 @@
       }
 
       box-shadow: 0 5px 9px rgba(86, 119, 252, .05);
-      @media (max-width: 768px) {
+
+      @media (min-width: 768px) and (min-width: 815px) {
         width: 25vw;
       }
     }
